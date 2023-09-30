@@ -32,6 +32,14 @@ function handleDOMContentLoaded() {
           name.textContent = character.name;
           image.src = character.image;
           voteCount.textContent = character.votes;
+
+          //   display number of votes from input field
+          votesForm.addEventListener("submit", function (e) {
+            //   console.log(e.target);
+
+            e.preventDefault();
+            voteCount.textContent = votes.value;
+          });
         });
       });
     });
